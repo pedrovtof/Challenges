@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Questionario</h1>
+  <div class="main">
+
+    <h2 id="question">Quer seguir para área de Front-End ou seguir para a área de Back-End</h2>
+    <div class="cards-container">
+      <div class="card" id="1" >
+          <img onclick="game(1)" src="./imgs/front-end.png" id="option1" alt="Front-End" title="Front-End">
+      </div>
+  
+      <div class="card" id="2" >
+          <img onclick="game(2)" src="./imgs/back-end.png" id="option2" alt="Back-End" title="Back-End">
+      </div>
+  
+      <div class="card ghost" id="3" >
+        <img onclick="game(3)" src="./imgs/csharp.png" id="option3" alt="Csharp" title="Csharp">
+      </div>
+  
+      <div class="card ghost" id="4" >
+        <img onclick="game(4)" src="./imgs/java.png" id="option4" alt="Java" title="Java">
+      </div>
+  
+      <div class="card ghost" id="5" >
+        <img onclick="game(5)" src="./imgs/react.png" id="option5" alt="React" title="React">
+      </div>
+  
+      <div class="card ghost" id="6" >
+        <img onclick="game(6)" src="./imgs/vue.png" id="option6" alt="Vue" title="Vue">
+      </div>
+  
+      <div class="card ghost" id="7" >
+        <img onclick="game(7)" src="./imgs/front-end-developer.png" id="option7" alt="Front-End-developer" title="Back-End">
+      </div>
+  
+      <div class="card ghost" id="8" >
+        <img onclick="game(8)" src="./imgs/back-end-developer.png" id="option8" alt="Back-End-developer" title="Back-End">
+      </div>
+  
+      <div class="card ghost" id="9" >
+        <img onclick="game(9)" src="./imgs/fullstack.png" id="option9" alt="fullstack-developer" title="Back-End">
+      </div>
+  
+    </div>
+  </div>
+ 
+
+  <div class="askTech-container ghost">
+    <h2 class="askTech-title">Quais tecnologias você tem interesse em aprender?</h2>
+    <form class="askTech-form" action="#">
+      <label for="addInfo" class="askTech-label">Digite aqui:</label>
+      <input id="addInfo" name="addInfo" type="text" class="askTech-input">
+      <button type="button" id="addLanguague" class="askTech-button">Adicionar</button>
+      <button type="submit" id="endForm" class="askTech-button">Finalizar</button>
+    </form>
+  </div>
+
+  <script src="./main.js">
+  </script>
+</body>
+</html>

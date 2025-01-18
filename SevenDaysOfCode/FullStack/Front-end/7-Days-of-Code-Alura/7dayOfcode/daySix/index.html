@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <form id="addItemForm">
+      <input type="text" id="itemInput" placeholder="Adicionar item...">
+      <button type="button">Finalizar</button>
+      <select id="categorySelect">
+        <option value="laticinios">Laticínios</option>
+        <option value="congelados">Congelados</option>
+        <option value="doces">Doces</option>
+      </select>
+      <button type="button">Adicionar</button>
+    </form>
+
+    <table id="itemTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Categoria</th>
+          <th>Acao</th>
+        </tr>
+      </thead>
+      <tbody id="table">  
+      </tbody>
+    </table>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

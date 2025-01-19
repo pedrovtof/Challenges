@@ -3,6 +3,8 @@
 ## Desafio 1 -->
 
 ### A sua tarefa de hoje é reescrever o código abaixo de maneira que ele imprima as informações de maneira correta, que faça sentido e sem erros:
+### Your task for today is to rewrite the code below so that it prints the information correctly, makes sense, and has no errors:
+
   ```
   let numeroUm = 1
   let stringUm = '1'
@@ -32,7 +34,8 @@
 
 ## Desafio 2 -->
 
-### Ele deve pedir para o usuário responder 3 perguntas:
+### O codigo deve pedir para o usuário responder 3 perguntas:
+### The code must ask the user to answer three questions:
 
 - Qual o seu nome?
 - Quantos anos você tem?
@@ -46,8 +49,10 @@ No final, o sistema vai exibir a mensagem:
   ```
 
 ### OPCIONAL
+### EXTRA
 
 ### Você vai complementar o código para que, depois de exibir a mensagem anterior, o programa pergunte:
+### Enhance the previous code so that after displaying the message, the program asks another question:
 
 Você gosta de estudar [linguagem]? Responda com o número 1 para SIM ou 2 para NÃO.
 
@@ -61,6 +66,7 @@ E aí, dependendo da resposta, ele deve mostrar uma das seguintes mensagens:
 ## Desafio 3 -->
 
 ### Seu desafio de hoje é criar os destinos possíveis de um jogo, em que o usuário consiga escolher:
+### Your challenge for today is to create possible destinations in a game where the user can make choices:
 
 1. Se quer seguir para área de Front-End ou seguir para a área de Back-End.
 
@@ -78,6 +84,7 @@ Além disso, também é essencial que, ao final do jogo, ela possa inserir quant
 ## Desafio 4 -->
 
 ### Você já brincou de tentar adivinhar o número que seu amigo ou amiga estava pensando? Hoje você vai voltar na infância e fazer exatamente isso. Mas agora, o jogo vai ser contra o próprio computador!
+### Have you ever played a game where you try to guess the number your friend is thinking? Today, you’ll go back to your childhood and do exactly that, but this time, the game will be against the computer!
 
 Você deve criar um programinha que comece com um valor específico pré-definido entre 0 a 10 para o número que você vai adivinhar (7, por exemplo).
 
@@ -97,6 +104,7 @@ Bibliotecas readline e math
 ## Desafio 5 -->
 
 ### Para facilitar a sua ida ao supermercado, você deve criar um programa em Javascript que perguntará se você deseja adicionar uma comida na sua lista de compras, e você deve poder responder com sim ou não.
+### To make your supermarket trip easier, create a program in JavaScript that asks if you want to add food to your shopping list, allowing you to answer with yes or no.
 
 Em seguida, ele perguntará qual comida você deseja inserir, e você digitará o nome dela, como por exemplo batata.
 
@@ -122,6 +130,7 @@ Lista de compras:
 ## Desafio 6 -->
 
 ### Você deverá criar a opção de remover algum item da lista, que será exibida junto à pergunta de “você deseja adicionar uma comida na lista de compras”?
+### You must add the option to remove an item from the list, displayed along with the question: “Do you want to add food to the shopping list?”
 
 A partir daí, caso a pessoa escolha essa opção, o programa irá imprimir os elementos presentes na lista atual, e a pessoa deverá escrever qual deles deseja remover.
 
@@ -140,6 +149,7 @@ Lembre-se que a opção de remover um item só deverá estar disponível a parti
 ## Desafio 7 -->
 
 ### Para o exercício de hoje: você já parou para pensar como uma calculadora funciona?
+### For today’s exercise: Have you ever wondered how a calculator works?
 
 Ela pede para você digitar um número, depois você seleciona um tipo de operação, um outro número, e ela faz sozinha o cálculo para te mostrar o resultado! Incrível, né?
 

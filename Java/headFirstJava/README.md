@@ -1,11 +1,11 @@
 # Book
 
-Head First Java 3.ed (8-17 java)
+Head First Java, 3rd (8-17 java)
 
-This folder contains the challenges of the books
+This folder contains the book's challenges
 
 // PT
 
-Use a Cabeça Java 3.ed (8-17 java)
+Use a Cabeça Java 3ª (8-17 java)
 
-Essa pasta contem os desafios do livro
+Esta pasta contém os desafios do livro.

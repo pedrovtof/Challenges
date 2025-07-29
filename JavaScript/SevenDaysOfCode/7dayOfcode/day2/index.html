@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Questionário</h1>
+        <form action="#">
+            <label  for="name">Qual o seu nome?</label>
+            <input required type="text" id="name" name="name" required>
+
+            <label  for="age">Quantos anos você tem?</label>
+            <input required type="number" id="age" name="age" required>
+
+            <label for="language">Qual linguagem de programação você está estudando?</label>
+            <input required type="text" id="language" name="language" required>
+
+            <button id="button" type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="container ghost">
+        <h1>Desafio Bonus</h1>
+        <form action="#">
+            <span id="msgAbove"></span>
+
+            <label id="askLanguage" for="ask"></label>
+
+            Sim<input type="radio" value="true" name="ask" id="ask">
+            Nao<input type="radio" value="false" name="ask" id="ask">
+            
+            <span id="msgCheck"></span>
+
+            <button id="buttonOP" type="submit">Finalizar</button>
+        </form>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

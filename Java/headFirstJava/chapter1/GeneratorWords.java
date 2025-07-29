@@ -35,20 +35,14 @@ public class GeneratorWords{
             "antagonist"
         };
 
-        int lenFirstList = first.length;
-        int lenSecondList= second.length;
-        int lenThirdList = third.length;
-
         java.util.Random randomItemFromList = new java.util.Random();
-
-        int i   = 0;
-        int x   = randomItemFromList.nextInt(lenFirstList);
-        int y   = randomItemFromList.nextInt(lenSecondList);
-        int z   = randomItemFromList.nextInt(lenThirdList);
-
         String space = " ";
 
-        System.out.println(first[x]+space+second[y]+space+third[z]);
+        System.out.print(first[randomItemFromList.nextInt(first.length)]);
+        System.out.print(space);
+        System.out.print(second[randomItemFromList.nextInt(second.length)]);
+        System.out.print(space);
+        System.out.print(third[randomItemFromList.nextInt(third.length)]);
 
     } 
 }

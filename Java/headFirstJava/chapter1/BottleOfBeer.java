@@ -1,4 +1,4 @@
-// Must writer a programming for sing the son 99Bottles of Beer
+// Must writer a program to sing the song 99Bottles of Beer
 
 
 public class BootleOfBeer{

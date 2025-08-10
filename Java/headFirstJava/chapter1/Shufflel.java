@@ -1,3 +1,5 @@
+// resolve the puzzle of the book / page 20
+
 public class Shufflel{
 
     public static void main(String[] args){

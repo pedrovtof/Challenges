@@ -10,19 +10,19 @@ namespace Calculate_raiz_from_x.models
 
         private int _x { get; set; }
 
-        private int _Expoent { get; set; }
+        private int _expoent { get; set; }
 
-        private int _Exponentiation { get; set; }
+        private int _exponentiation { get; set; }
 
        public Power()
         {
             
         } 
 
-        public Power(int x, int Expoent)
+        public Power(int x, int expoent)
         {
             this._x = x;
-            this._Expoent =  Expoent;
+            this._expoent =  expoent;
         }
 
         /// <summary>
@@ -35,12 +35,13 @@ namespace Calculate_raiz_from_x.models
             
             int CurrentNumberOfThePower = x;
 
-            for(int i=1; i < _Expoent; i++)
+            for(int i=1; i < _expoent; i++)
             {
                 CurrentNumberOfThePower = CurrentNumberOfThePower*_x;
             }
 
             // Inversão de valores em base negativa
+            /*
             if(_x < 0)
             {
                int isEven = 0;
@@ -50,6 +51,7 @@ namespace Calculate_raiz_from_x.models
                CurrentNumberOfThePower = isEven == 0 ? CurrentNumberOfThePower = -CurrentNumberOfThePower : CurrentNumberOfThePower ;
 
             }
+            */
 
             return CurrentNumberOfThePower;
             
@@ -65,34 +67,40 @@ namespace Calculate_raiz_from_x.models
         {
 
             // Potencia com expoente negativado
-            if(_Expoent<0)
+            if(_expoent<0)
             {
-                _Expoent = Math.Abs(_Expoent);
+                _expoent = Math.Abs(_expoent);
                 // perceba que resultado deverá ser fracionado com base invertida, ou seja será X dividido em expoente partes
             }
             // Potencia elevado a 1 é igual a si mesmo potencializado por si (logo a^1 = a)
-            if (_Expoent == 1)
+            if (_expoent == 1)
             {
-                _Exponentiation = _x;
+                _exponentiation = _x;
                 return;
             }
             
             // Potencia de 0 é igual a 1 sempre
-            if (_Expoent == 0)
+            if (_expoent == 0)
             {
-                _Exponentiation = 1;
+                _exponentiation = 1;
                 return;
             }
             
-            _Exponentiation = this.PowerNumberLoop(_x);
+            _exponentiation = this.PowerNumberLoop(_x);
             
 
             return;
         }
 
+        public int GetExponentation()
+        {
+            return _exponentiation;
+        }
+
+
         public void ShowPowerdNumber()
         {
-            Console.WriteLine($"\nnumero {_x} a potencia de {_Expoent}  é igual a {_Exponentiation}\n");
+            Console.WriteLine($"\nnumero {_x} a potencia de {_expoent}  é igual a {_exponentiation}\n");
         }
     }
 }

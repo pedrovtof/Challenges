@@ -19,6 +19,8 @@ namespace Calculate_raiz_from_x.models
     
         private int _root { get; set; }
 
+        private bool isFractional { get; set; }
+
         public Root()
         {
             _cousinNumbers = new Dictionary<int, int>();
@@ -36,36 +38,31 @@ namespace Calculate_raiz_from_x.models
 
         private int ValidateMdc(List<int> Numbers, int radicando)
         {
-            int isValid = -99;
+            bool isValid;
 
             foreach(var number in Numbers)
             {
 
-                isValid = radicando % number == 0 ?number:-99;
+                isValid = radicando % number == 0;
 
-                if(isValid != -99)
+                if(isValid)
                 {
                     Console.WriteLine($"Radicando: {radicando} Primo:{number} tem como resto {radicando % number}");
-                    break;
+                    return number;
                 }
              
             }
 
-            return isValid;
+            throw new Exception("Valor não pode ser calculado pelos primos informados");
         }
 
         private int ValidateMdc(int indice, int radicando)
         {
             List<int> CounsinNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31];
 
-            int isValid = this.ValidateMdc(CounsinNumbers, radicando);
+            int number = this.ValidateMdc(CounsinNumbers, radicando);
 
-            if(isValid == -99)
-            {
-                throw new Exception("Valor não pode ser calculado pelos primos informados");
-            }
-
-            return isValid;
+            return number;
         }
 
         private int RootLoop(int indice, int radicando, int cousin)
@@ -86,7 +83,7 @@ namespace Calculate_raiz_from_x.models
 
             if(resto > 0)
             {
-                return -98;
+                isFractional = true;
             }
 
             return division;
@@ -187,7 +184,7 @@ namespace Calculate_raiz_from_x.models
             }
             else
             {
-                Console.WriteLine($"Prova real negada");
+                isFractional = true;
                 return false;
             }
 
@@ -196,19 +193,14 @@ namespace Calculate_raiz_from_x.models
 
         public void ShowRoot()
         {
-            if(_root == -98)
-            {
-                string content = "\n!!! Raiz não pode ser calculada pois é complexa/fracionada (é um conjunto de raizes) !!!! \n";
-
-                Console.WriteLine(content);
-                //throw new Exception(content);
-            }
+            string content  = "";
 
             bool isValid = this.RealMathValidate();
 
-            if (!isValid)
+            if(isFractional || !isValid)
             {
-                Console.WriteLine("Ops! fração fracionada");
+                content = "\n!!! Raiz não pode ser calculada pois é complexa/fracionada (é um conjunto de raizes) !!!! \n";
+                throw new Exception(content);
             }
 
             Console.WriteLine($"\nRaiz é {_root}\n\n");

@@ -1,0 +1,16 @@
+flowchart TD
+ 
+    EntryPoint[Start] --> GetValue{Recebe o valor}
+    GetValue -- false --> Stop
+    GetValue -- true  --> CalculateRoot[Inicia calculo da raiz]
+    CalculateRoot --> GetMdc{Encontra o divisor em comum}
+    Counsin[Recupera o valor de numeros primos] -.-> GetMdc 
+    GetMdc -- false --> Stop
+    GetMdc -- true --> RootLoop[Inicia o calculo para quantidade de vezes usada a divisao comum com relacao ao indice]
+    RootLoop --> EndLoop{Valor do radicando chegou a 0} 
+    EndLoop -- false --> GetMdc
+    EndLoop -- true --> CalculateAmountByIndice[Contagem de indices, potencialzando e somando]
+    CalculateAmountByIndice --> ValidateResult{Pega a potencia do indice e faz a prova real para chegar no radicando}
+    ValidateResult -- false --> Stop
+    ValidateResult -- true --> ExitPoint[Exit]
+    
